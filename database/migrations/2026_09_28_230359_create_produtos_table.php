@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->decimal('preco', 8, 2);
-            $table->string('nome');
-            $table->string('senha');
-            $table->string('email');
-            $table->string('telefone');
+            $table->string('nome', 100);
+            $table->string('email', 100)->unique();
+            $table->string('telefone', 20);
+            $table->string('sexo', 3);
         });
     }
 
